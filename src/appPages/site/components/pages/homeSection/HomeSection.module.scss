@@ -1,0 +1,28 @@
+//?  Псевдоэлементы пятен
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.6;
+}
+
+.container::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 30%, #ff00ff55, transparent);
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+}
+
+.container::after {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at 60% 60%, #b300ff48, transparent);
+  bottom: 10%;
+  right: 10%;
+  z-index: 1;
+}
+// ? ostalnoe
