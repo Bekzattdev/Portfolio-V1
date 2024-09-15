@@ -9,14 +9,20 @@ interface ReduxProviderType {
   children: ReactNode;
 }
 
-const messages: any = {
+// Определяем поддерживаемые локали
+const supportedLocales = ["en", "ru"];
+const messages: Record<string, any> = {
   en,
   ru,
 };
 
 export const Provider: FC<ReduxProviderType> = ({ children }) => {
   const pathname = usePathname();
-  const locale = pathname.split("/")[1] || "en";
+  // Извлекаем локаль из пути и проверяем, поддерживается ли она
+  const localeFromPath = pathname.split("/")[1];
+  const locale = supportedLocales.includes(localeFromPath)
+    ? localeFromPath
+    : "en"; // По умолчанию "en"
 
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
