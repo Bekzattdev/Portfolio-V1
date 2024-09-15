@@ -5,7 +5,7 @@
 }
 .container {
   margin: 0 auto;
-  width: 90%;
+  width: 70%;
 }
 
 a {
@@ -25,7 +25,26 @@ button {
 }
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: auto;
   // background: linear-gradient(45deg, #052133, #220967, #210533);
   background: linear-gradient(45deg, #0c0c0c, #240746);
+}
+
+:-webkit-scrollbar {
+  width: 1px; /* Ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+  background: #ca2525; /* Цвет трека (фон) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bf2929; /* Цвет ползунка */
+  border-radius: 10px; /* Закругленные углы */
+  border: 3px solid #dd1c1c; /* Внешняя граница ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f01313; /* Цвет ползунка при наведении */
 }

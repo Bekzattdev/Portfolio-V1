@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import scss from "./layoutSite.module.scss";
-import Header from "./header/Header";
 import Footer from "./footer/Footer";
+import Header from "./header/Header";
 
 interface layoutSiteProps {
   children: ReactNode;

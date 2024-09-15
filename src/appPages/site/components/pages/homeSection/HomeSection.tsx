@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import scss from "./HomeSection.module.scss";
+import AboutPage from "../AboutAll/AboutPage";
+import HomePage from "../AboutAll/Home";
 
 const HomeSection = () => {
   return (
     <section className={scss["mainMe"]}>
       <div className={scss.container}>
-        <h1 className={scss.title}>Elkhan Sharshenbekov</h1>
-        <p className={scss.subtitle}>I am a former sysadmin</p>
+        <HomePage />
+        <AboutPage />
       </div>
     </section>
   );
